@@ -2,6 +2,7 @@ import { Button } from 'components/Button/Button';
 import { Component } from 'react';
 import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem';
 import { Loader } from 'components/Loader/Loader';
+import PropTypes from 'prop-types';
 
 import css from './ImageGallery.module.css';
 
@@ -58,4 +59,8 @@ export class ImageGallery extends Component {
         </>
       );
   }
+}
+
+ImageGallery.propTypes = {
+  searchQuery: PropTypes.string,
 }

@@ -1,6 +1,7 @@
 import { Loader } from 'components/Loader/Loader';
 import { Component } from 'react';
 import css from './Button.module.css';
+import PropTypes from 'prop-types';
 
 const baseUrl = 'https://pixabay.com/api';
 const apiKey = '33430670-3151596af5f0d850f5d459d27';
@@ -44,4 +45,9 @@ export class Button extends Component {
       </button>
     );
   }
+}
+
+Button.propTypes = {
+  searchQuery: PropTypes.string.isRequired,
+  onLoadMore: PropTypes.func.isRequired,
 }

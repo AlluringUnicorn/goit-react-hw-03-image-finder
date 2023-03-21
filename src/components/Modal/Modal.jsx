@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { createPortal } from 'react-dom';
 import css from './Modal.module.css';
+import PropTypes from 'prop-types';
 
 const modalRoot = document.querySelector('#modal-root');
 
@@ -17,4 +18,9 @@ export class Modal extends Component {
       modalRoot
     );
   }
+}
+
+Modal.propTypes = {
+  onEscPress: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 }
